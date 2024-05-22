@@ -9,6 +9,12 @@ import time
 from config.node_config import ZGS_CONFIG
 from eth_utils import encode_hex
 
+print("I'm utils")
+def fib(n):
+    if n < 2:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
 
 class PortMin:
     # Must be initialized with a unique integer for each process
@@ -133,9 +139,3 @@ def assert_greater_than(thing1, thing2):
 def assert_greater_than_or_equal(thing1, thing2):
     if thing1 < thing2:
         raise AssertionError("%s < %s" % (str(thing1), str(thing2)))
-
-def fib(n):
-    if n < 2:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
